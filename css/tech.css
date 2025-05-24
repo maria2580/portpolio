@@ -1,0 +1,101 @@
+/* tech.html 시각화 스타일 */
+.tech-skills-visual .tech-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--light-color); /* 기존 light-color 활용 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.tech-skills-visual .category-title {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    text-align: left;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 반응형 그리드 */
+    gap: 25px;
+}
+
+.tech-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 클릭/호버 인터랙션 암시 */
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.tech-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tech-card-header .tech-logo {
+    width: 40px; /* 로고 크기 통일 */
+    height: 40px;
+    object-fit: contain; /* 로고 비율 유지 */
+    margin-right: 15px;
+}
+/* 로고가 여러개일 경우를 대비 */
+.tech-card-header .tech-logo + .tech-logo {
+    margin-left: -25px; /* 살짝 겹치게 */
+     margin-right: 15px;
+}
+
+
+.tech-card-header h4 {
+    font-size: 1.3em;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.tech-summary {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    flex-grow: 1; /* 카드의 높이가 달라도 요약 부분이 채워지도록 */
+}
+
+.tech-details {
+    font-size: 0.85em;
+    color: #555;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+    display: none; /* 기본적으로 숨김 */
+}
+
+.tech-details p {
+    margin-bottom: 8px;
+}
+.tech-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* JavaScript로 .tech-card 클릭 시 .tech-details 보이도록 토글 (예시) */
+.tech-card.active .tech-details {
+    display: block;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr; /* 모바일에서는 1열로 */
+    }
+    .tech-card-header h4 {
+        font-size: 1.2em;
+    }
+}
