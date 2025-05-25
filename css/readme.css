@@ -1,0 +1,143 @@
+/* README 모달 스타일 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 화면에 고정 */
+    z-index: 2000; /* 다른 요소들 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 내용이 길 경우 스크롤 */
+    background-color: rgba(0,0,0,0.6); /* 반투명 배경 */
+    padding-top: 60px; /* 상단 여백 */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 화면 중앙에 적당한 여백으로 위치 */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%; /* 모달 너비 */
+    max-width: 800px; /* 최대 너비 */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-height: 80vh; /* 모달 최대 높이 */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Markdown 파서 사용 시 readmeHtmlDisplay 스타일 */
+#readmeHtmlDisplay {
+    overflow-y: auto; /* 내용이 길면 내부 스크롤 */
+    flex-grow: 1;     /* 남은 공간을 채우도록 */
+    min-height: 200px;/* 최소 높이 */
+    padding: 10px;    /* 내부 여백 */
+    line-height: 1.7;
+}
+#readmeHtmlDisplay h1, 
+#readmeHtmlDisplay h2, 
+#readmeHtmlDisplay h3,
+#readmeHtmlDisplay h4,
+#readmeHtmlDisplay h5,
+#readmeHtmlDisplay h6 {
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    color: var(--dark-color);
+    font-weight: 700;
+}
+#readmeHtmlDisplay h1 { font-size: 1.8em; }
+#readmeHtmlDisplay h2 { font-size: 1.5em; }
+#readmeHtmlDisplay h3 { font-size: 1.3em; }
+
+#readmeHtmlDisplay p {
+    margin-bottom: 1em;
+}
+#readmeHtmlDisplay ul,
+#readmeHtmlDisplay ol {
+    margin-left: 1.8em;
+    margin-bottom: 1em;
+}
+#readmeHtmlDisplay li {
+    margin-bottom: 0.4em;
+}
+#readmeHtmlDisplay a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+#readmeHtmlDisplay a:hover {
+    color: var(--secondary-color);
+}
+#readmeHtmlDisplay code { /* 인라인 코드 */
+    background-color: #e9ecef;
+    color: #c7254e; /* Bootstrap 스타일과 유사하게 */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+    font-size: 0.9em;
+}
+#readmeHtmlDisplay pre { /* 코드 블록 */
+    background-color: #2d2d2d; /* 어두운 배경 */
+    color: #f8f8f2; /* 밝은 텍스트 */
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto; /* 가로 스크롤 */
+    margin-bottom: 1em;
+    font-family: 'Consolas', 'Monaco', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+#readmeHtmlDisplay pre code { /* 코드 블록 내의 코드는 배경/패딩 상속 */
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+}
+#readmeHtmlDisplay strong {
+    font-weight: 700;
+}
+#readmeHtmlDisplay em {
+    font-style: italic;
+}
+#readmeHtmlDisplay hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5em 0;
+}
+#readmeHtmlDisplay blockquote {
+    padding: 0.5em 1em;
+    margin: 0 0 1em;
+    font-size: 1em;
+    border-left: 0.25em solid #dfe2e5;
+    color: #6a737d;
+    background-color: #f8f9fa;
+}
+#readmeHtmlDisplay img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5em 0;
+}

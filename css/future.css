@@ -1,0 +1,8 @@
+/* 미래 계획 페이지 */
+#future-plan .plan-section {
+    margin-bottom: 2.5rem;
+}
+#future-plan .plan-section h3 {
+    border-bottom: none;
+    font-size: 1.6rem;
+}
