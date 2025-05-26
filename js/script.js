@@ -365,4 +365,5 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', handleTocDisplayByScreenSize);
 
     } // End of if (floatingToc && currentPath === "index.html")
+   
 });
