@@ -6,3 +6,72 @@
     border-bottom: none;
     font-size: 1.6rem;
 }
+/* future.html - 개인 공부 계획 테이블 스타일 (개선안) */
+.study-plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* 위쪽 제목과의 간격 조정 */
+    border: 1px solid #e0e0e0; /* style.css의 .bg-light 테두리와 유사한 연한 회색 */
+    border-radius: 8px;
+    overflow: hidden; /* border-radius가 내부 요소에도 적용되도록 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 약간의 부드러운 그림자 */
+    font-family: var(--font-family); /* 전체 테이블에 기본 폰트 적용 */
+}
+
+.study-plan-table th, /* th 사용 시 대비 (현재는 td만 사용) */
+.study-plan-table td {
+    border-bottom: 1px solid #e0e0e0; /* 각 행의 하단 구분선 */
+    vertical-align: middle;
+    padding: 0; /* 셀 자체 패딩은 제거, 내부에서 p 태그 등으로 관리 */
+}
+
+.study-plan-table tr:last-child td {
+    border-bottom: none; /* 마지막 행의 하단 구분선 제거 */
+}
+
+.study-subject-cell {
+    width: 220px; /* 너비 약간 조정 (내용에 따라 조절) */
+    background-color: var(--primary-color); /* 포트폴리오 주요 색상 사용 */
+    color: #fff; /* 흰색 텍스트로 가독성 확보 */
+    font-weight: 500; /* 기존 폰트 두께 */
+    font-size: 1.1em;
+    padding: 18px; /* 패딩 조정 */
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid var(--secondary-color); /* 주요 색상의 어두운 버전으로 구분선 */
+}
+
+.study-details-cell {
+    background-color: var(--light-color); /* style.css의 .bg-light와 동일한 배경색 */
+    padding: 18px; /* 패딩 조정 */
+    line-height: 1.75; /* 가독성을 위한 줄 간격 조정 */
+}
+
+.study-details-cell p {
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-bottom: 12px; /* 단락 간 간격 조정 */
+    font-size: 0.95em;
+    color: var(--text-color); /* style.css의 기본 텍스트 색상 사용 */
+}
+
+.study-details-cell p strong {
+    font-weight: 600; /* 좀 더 강조된 폰트 두께 */
+    color: var(--dark-color); /* style.css의 어두운 텍스트 색상 사용 */
+    margin-right: 5px;
+}
+
+.study-details-cell p:last-child {
+    margin-bottom: 0;
+}
+
+/* 테이블 상단 제목 스타일 (선택 사항) */
+.study-focus-title { /* 예: <caption> 태그나 테이블 위 h3에 적용 */
+    text-align: center;
+    font-size: 1.5em; /* h3보다 약간 작은 크기 또는 h4와 유사하게 */
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-top: 40px; /* 위 요소와의 간격 */
+    margin-bottom: 20px; /* 테이블과의 간격 */
+    font-family: var(--font-family);
+}
